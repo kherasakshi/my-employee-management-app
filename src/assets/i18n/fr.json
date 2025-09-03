@@ -1,0 +1,33 @@
+
+{
+  "TITLE": "Démo de Changement de Langue",
+  "ENGLISH_BUTTON": "Anglais",
+  "FRENCH_BUTTON": "Français",
+
+  "SIDENAV": {
+    "EMPLOYEE_PORTAL": "Portail des Employés",
+    "EMPLOYEE_LIST": "Liste des Employés",
+    "MEDICAL_DETAILS": "Détails Médicaux",
+    "EMPLOYEE_CHARTS": "Graphiques des Employés",
+    "SETTINGS": "Paramètres",
+    "LOG_OUT": "Déconnexion"
+  },
+
+  "EMPLOYEE_LIST": {
+    "EMPLOYEE_TITLE": "Liste des Employés"
+  },
+
+  "SETTINGS": {
+    "SETTING_TITLE": "Paramètres",
+
+    "THEME_TITLE": "Thème",
+    "THEME_LIGHT": "Clair",
+    "THEME_DARK": "Sombre",
+
+    "LANGUAGE_TITLE": "Langue",
+    "LANGUAGE_SELECT_PROMPT": "Choisir la langue",
+
+    "NOTIFICATIONS_TITLE": "Notifications",
+    "NOTIFICATIONS_ENABLE_LABEL": "Activer les notifications RH"
+  }
+}

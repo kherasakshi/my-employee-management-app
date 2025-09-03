@@ -1,0 +1,26 @@
+{
+  "TITLE": "Language Switcher Demo",
+  "ENGLISH_BUTTON": "English",
+  "FRENCH_BUTTON": "French",
+  "SIDENAV": {
+    "EMPLOYEE_PORTAL": "Employee Portal",
+    "EMPLOYEE_LIST": "Employee List",
+    "MEDICAL_DETAILS": "Medical Details",
+    "EMPLOYEE_CHARTS": "Employee Charts",
+    "SETTINGS": "Settings",
+    "LOG_OUT": "Log Out"
+  },
+  "EMPLOYEE-LIST": {
+    "EMPLOYEE_TITLE": "Employee List"
+    },
+  "SETTINGS":{
+    "SETTING_TITLE": "Settings",
+    "THEME_TITLE": "Theme",
+    "THEME_LIGHT": "Light",
+    "THEME_DARK": "Dark",
+    "LANGUAGE_TITLE": "Language",
+    "LANGUAGE_SELECT": "Select Language",
+    "NOTIFICATIONS_TITLE": "Notifications",
+    "NOTIFICATIONS_ENABLE_LABEL": "Enable HR Notifications"
+  }
+}

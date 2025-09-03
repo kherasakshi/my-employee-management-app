@@ -1,0 +1,170 @@
+<main class="main-login-section w-full min-h-screen">
+
+  <div class="background-img-section">
+    <img
+      src="human-resources-Image.webp"
+      alt="HR Image"
+      class="Hr-main-image w-full h-full object-cover brightness-70"
+    />
+  </div>
+
+  <section class="flex items-center justify-center min-h-screen px-4">
+    <div class="login-section w-full p-6">
+      <h2 class="text-3xl font-serif mb-6 text-center text-white">
+        Login Page
+      </h2>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    
+        <label class="block text-white font-semibold mb-1" for="email">Email:</label>
+        <mat-form-field appearance="fill" class="w-full mb-4">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            placeholder="Enter your email"
+            formControlName="email"
+            id="email"
+          />
+          <mat-error
+            *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+          >
+            Email is required!
+          </mat-error>
+        </mat-form-field>
+        
+        <label class="block text-white font-semibold mb-1" for="password">Password:</label>
+        <mat-form-field appearance="fill" class="w-full mb-4">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            [type]="hidePassword ? 'password' : 'text'"
+            placeholder="Enter your password"
+            id="password"
+            formControlName="password" />
+          <button
+            type="button"
+            mat-icon-button
+            matSuffix
+            (click)="hidePassword = !hidePassword"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hidePassword"
+          >
+            <mat-icon
+              >{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon
+            >
+          </button>
+          <mat-error
+            *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+          >
+            Password is required!
+          </mat-error>
+        </mat-form-field>
+
+    
+        <button
+          mat-raised-button
+          class="login-btn w-full mt-4 transition-all duration-300"
+          type="submit"
+          [disabled]="loginForm.invalid || isLoading"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </section>
+
+
+  <div
+    *ngIf="isLoading"
+    class="fixed inset-0 bg-white/40 flex flex-col items-center justify-center z-50">
+    <div
+      class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-800 border-solid"
+    ></div>
+    <p class="mt-4 text-black text-lg">Please wait...</p>
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Loading Overlay -->
+<!-- <div *ngIf="isLoading" class="loading-overlay fixed inset-0 flex flex-col items-center justify-center bg-opacity-100 z-50" style="background-color: rgb(214, 211, 211);">
+    <mat-spinner color="accent" [diameter]="50" class="mb-4"></mat-spinner> 
+    <span class="text-xl font-bold">Please wait...</span>
+  </div> -->
+<!-- <div *ngIf="" style="color: red; text-align: center; margin-top: 10px;">Invalid credentials</div> -->
+
+<!-- <div *ngIf="isLoading"
+ class="fixed inset-0 bg-white/40  flex flex-col items-center justify-center z-50">
+<div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-800 border-solid"></div>
+ <p class="mt-4 text-black text-lg">Please wait...</p>
+</div> -->

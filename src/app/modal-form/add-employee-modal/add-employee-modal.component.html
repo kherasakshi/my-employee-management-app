@@ -1,0 +1,232 @@
+<div class="theme-toggle flex flex-row justify-between">
+  <mat-icon (click)="toggleTheme()" class="theme-icon">{{
+    isDarkTheme ? "dark_mode" : "light_mode"
+  }}</mat-icon>
+  <div>
+    <mat-icon (click)="onCloseClick()" class="close-icon">close</mat-icon>
+  </div>
+</div>
+
+<form
+  [formGroup]="addUserForm"
+  (ngSubmit)="onSubmit()"
+  [ngClass]="{ 'dark-mode': isDarkTheme, 'light-mode': !isDarkTheme }"
+>
+  <h2 mat-dialog-title class="add-title">{{ title }}</h2>
+
+  <mat-dialog-content>
+    <span class="block text-black font-semibold mb-1">First Name:</span>
+    <mat-form-field appearance="fill" class="w-full mb-4">
+      <mat-label>First Name</mat-label>
+      <input
+        matInput
+        placeholder="Enter First Name"
+        formControlName="firstName"
+        id="firstName"
+        autocomplete="given-name"
+        name="firstName"
+      />
+      <mat-error
+        *ngIf="
+          addUserForm.get('firstName')?.invalid &&
+          addUserForm.get('firstName')?.touched
+        "
+      >
+        First Name is required!
+      </mat-error>
+      <mat-error *ngIf="addUserForm.get('firstName')?.hasError('pattern')">
+        Only alphabets are allowed!
+      </mat-error>
+    </mat-form-field>
+
+    <span class="block text-black font-semibold mb-1" for="lastName"
+      >Last Name:</span
+    >
+    <mat-form-field appearance="fill" class="w-full mb-4">
+      <mat-label>Last Name</mat-label>
+      <input
+        matInput
+        placeholder="Enter Last Name"
+        formControlName="lastName"
+        id="lastName"
+        name="lastName"
+      />
+      <mat-error
+        *ngIf="
+          addUserForm.get('lastName')?.invalid &&
+          addUserForm.get('lastName')?.touched
+        "
+      >
+        Last Name is required!
+      </mat-error>
+      <mat-error *ngIf="addUserForm.get('lastName')?.hasError('pattern')">
+        Only alphabets are allowed!
+      </mat-error>
+    </mat-form-field>
+
+    <span class="block text-black font-semibold mb-1">Email:</span>
+    <mat-form-field appearance="fill" class="w-full mb-4">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        placeholder="Enter Email"
+        formControlName="email"
+        id="email"
+        name="email"
+      />
+      <mat-error
+        *ngIf="
+          addUserForm.get('email')?.invalid && addUserForm.get('email')?.touched
+        "
+      >
+        Valid Email is required!
+      </mat-error>
+    </mat-form-field>
+
+    <span class="block text-black font-semibold mb-1">Age</span>
+    <mat-form-field appearance="fill" class="w-full mb-4">
+      <mat-label>Age</mat-label>
+      <input
+        matInput
+        inputmode="number"
+        placeholder="Enter Age"
+        formControlName="age"
+        id="age"
+      />
+      <mat-error
+        *ngIf="
+          addUserForm.get('age')?.invalid && addUserForm.get('age')?.touched
+        "
+      >
+        Age is required!
+      </mat-error>
+    </mat-form-field>
+
+    <span class="block text-black font-semibold mb-1">Date of Birth:</span>
+    <mat-form-field appearance="fill" class="w-full mb-4">
+      <mat-label>Date of Birth</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        placeholder="Choose DOB"
+        formControlName="birthDate"
+        id="birthDate"
+        name="birthdate"
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error
+        *ngIf="
+          addUserForm.get('birthDate')?.touched &&
+          addUserForm.get('birthDate')?.invalid
+        "
+      >
+        Date of Birth is required
+      </mat-error>
+    </mat-form-field>
+
+    <span class="block text-black font-semibold mb-1">Profession</span>
+    <mat-form-field appearance="fill" class="w-full mb-4">
+      <mat-label>Profession</mat-label>
+
+      <mat-select formControlName="profession" id="profession">
+        <mat-option *ngFor="let prof of professions" [value]="prof.name">
+          {{ prof.name }}
+        </mat-option>
+      </mat-select>
+
+      <mat-error
+        *ngIf="
+          addUserForm.get('profession')?.touched &&
+          addUserForm.get('profession')?.invalid
+        "
+      >
+        Profession is required!
+      </mat-error>
+    </mat-form-field>
+
+    <span class="block text-black font-semibold mb-1">Sport Interest</span>
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Sport Interest</mat-label>
+      <mat-select formControlName="sportInterest" id="sportInterest">
+        <mat-option *ngFor="let sport of sports" [value]="sport">
+          {{ sport }}
+        </mat-option>
+      </mat-select>
+      <mat-error
+        *ngIf="
+          addUserForm.get('sportInterest')?.invalid &&
+          addUserForm.get('sportInterest')?.touched
+        "
+      >
+        Please select a sport!
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Extra Fields -->
+    <mat-checkbox
+      formControlName="showExtras"
+      class="mb-4 block font-semibold text-sm"
+    >
+      Add Additional Info</mat-checkbox
+    >
+    <div *ngIf="showExtras">
+      <label class="block text-black font-semibold mb-1">Hobbies:</label>
+      <mat-form-field appearance="fill" class="w-full mb-4">
+        <mat-label>Hobbies</mat-label>
+        <input
+          matInput
+          placeholder="Enter Hobbies"
+          formControlName="hobbies"
+          id="hobbies"
+          name="hobbies"
+        />
+        <mat-error
+          *ngIf="
+            addUserForm.get('hobbies')?.invalid &&
+            addUserForm.get('hobbies')?.touched
+          "
+        >
+          Please select hobbies!
+        </mat-error>
+      </mat-form-field>
+
+      <span class="block text-black font-semibold mb-1"
+        >Additional Contact Number:</span
+      >
+      <mat-form-field appearance="fill" class="w-full mb-4">
+        <mat-label>Contact Number</mat-label>
+        <input
+          matInput
+          placeholder="Enter Second Contact"
+          formControlName="contact"
+          id="contact"
+          name="contact"
+        />
+
+        <mat-error
+          *ngIf="
+            addUserForm.get('contact')?.invalid &&
+            addUserForm.get('contact')?.touched
+          "
+        >
+          Please enter valid number!
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button
+      mat-button
+      mat-dialog-close
+      class="close-btn"
+      (click)="onCloseClick()"
+    >
+      Close
+    </button>
+    <button mat-button [disabled]="addUserForm.invalid" class="submit-btn">
+      {{ submitButtonLabel }}
+    </button>
+  </mat-dialog-actions>
+</form>

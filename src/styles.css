@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+body {
+  --background-color: #fafafa;
+  --text-color: #242323;
+}
+
+body.dark-theme {
+  --background-color: #1b3a64fd;
+  --text-color: #f2f4f6;
+}
+
+.test-box {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
+
+
+
+
+
+

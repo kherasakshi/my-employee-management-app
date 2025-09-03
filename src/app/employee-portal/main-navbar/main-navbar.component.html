@@ -1,0 +1,78 @@
+<div class="top-header" *ngIf="!isLargeScreen">
+  <button mat-icon-button class="menu-icon-top" (click)="toggleSidebar()" >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="top-header-title">{{ 'SIDENAV.EMPLOYEE_PORTAL' | translate }}</div>
+</div>
+
+<mat-drawer-container
+  class="drawer-container "
+  autosize
+  [ngClass]="{'has-top-header': !isLargeScreen}"
+  (backdropClick)="onBackdropClicked()"
+>
+  <mat-drawer
+    class="sidenav"
+    [mode]="isLargeScreen ? 'side' : 'over'"
+    [opened]="isLargeScreen ? true : isSidebarOpen"
+    [ngClass]="{ 'collapsed': !isSidebarOpen && isLargeScreen }"
+  >
+    <div class="sidebar-toggle" [class.hidden-on-mobile]="!isLargeScreen">
+      <button mat-icon-button class="menu-toggle-btn" (click)="toggleSidebar()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <div class="nav-title" *ngIf="isSidebarOpen">{{ 'SIDENAV.EMPLOYEE_PORTAL' | translate }}</div>
+
+    <mat-nav-list>
+
+      <a mat-list-item routerLink="/main-navbar/employee-list" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeSidebarOnMobile()">
+        <mat-icon>group</mat-icon>
+        <span class="nav-text" *ngIf="isSidebarOpen">{{ 'SIDENAV.EMPLOYEE_LIST' | translate }}</span>
+      </a>
+      <a mat-list-item routerLink="/main-navbar/employee-medical-details" routerLinkActive="active" (click)="closeSidebarOnMobile()">
+        <mat-icon>medical_services</mat-icon>
+        <span class="nav-text" *ngIf="isSidebarOpen">{{ 'SIDENAV.MEDICAL_DETAILS' | translate }}</span>
+      </a>
+
+    
+      <a mat-list-item routerLink="/main-navbar/employee-charts" routerLinkActive="active" (click)="closeSidebarOnMobile()">
+        <mat-icon>bar_chart</mat-icon>
+        <span class="nav-text" *ngIf="isSidebarOpen">{{ 'SIDENAV.EMPLOYEE_CHARTS' | translate }}</span>
+      </a>
+
+      <a mat-list-item routerLink="/main-navbar/settings" routerLinkActive="active" (click)="closeSidebarOnMobile()">
+        <mat-icon>settings</mat-icon>
+        <span class="nav-text" *ngIf="isSidebarOpen">{{ 'SIDENAV.SETTINGS' | translate }}</span>
+      </a>
+
+      <a mat-list-item routerLink="/login" routerLinkActive="active" (click)="closeSidebarOnMobile()">
+        <mat-icon (click)="onLogOut()">logout</mat-icon>
+        <span class="nav-text" *ngIf="isSidebarOpen">{{ 'SIDENAV.LOG_OUT' | translate }}</span>
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="main-content test-box" >
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

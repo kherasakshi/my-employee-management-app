@@ -1,0 +1,83 @@
+.add-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.close-btn {
+  height: 36px;
+  min-width: 80px;
+  background-color: #5f5a5a !important;
+  color: #f0f8ff !important;
+  border-radius: 4px !important;
+}
+
+.close-icon{
+  cursor: pointer;
+}
+.submit-btn {
+  height: 36px;
+  min-width: 80px;
+  background-color: rgb(5, 165, 133) !important;
+  color: #f0f8ff !important;
+  border-radius: 4px !important;
+}
+
+.theme-toggle {
+  margin: 8px 20px 0;
+  color: rgb(5, 5, 55);
+}
+
+.theme-icon {
+  cursor: pointer;
+  font-size: 26px;
+  color: var(--icon-color);
+}
+
+
+form.light-mode {
+  background-color: #ffffff;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+form.dark-mode {
+  background: linear-gradient(to bottom right, #72bcf9, #0d4395);
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+form.dark-mode .mat-form-field-label,
+form.dark-mode .mat-input-element,
+form.dark-mode .mat-select-value {
+  color: white !important;
+}
+
+form.dark-mode .mat-form-field-underline {
+  background-color: white;
+}
+
+
+@media (max-width: 640px) {
+  .add-title {
+    font-size: 22px;
+  }
+
+  .mat-dialog-content {
+    padding: 0 12px !important;
+  }
+
+  .close-btn,
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+
+
+

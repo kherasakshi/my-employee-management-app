@@ -1,0 +1,50 @@
+<div class="settings-wrapper px-6 py-10 max-w-4xl mx-auto space-y-10">
+  <h2 class="text-3xl font-semibold text-gray-800 dark:text-gray-200 test-box">{{'SETTINGS.SETTING_TITLE'| translate}}</h2>
+
+  <!-- theme toggle -->
+  <section class="settings-section ">
+    <div class="setting-header">{{'SETTINGS.THEME_TITLE'| translate}}</div>
+    <div class="setting-control">
+      <span class="mr-4">{{'SETTINGS.THEME_LIGHT'| translate}}</span>
+      <label class="theme-toggle">
+        <input type="checkbox" (change)="toggleTheme()" 
+        [checked]="isDarkMode"
+ />
+        <span class="slider"></span>
+      </label>
+      <span class="ml-4">{{'SETTINGS.THEME_DARK'| translate}}</span>
+    </div>
+  
+  </section>
+  
+  <!-- language switcher -->
+  <section class="settings-section">
+    <div class="setting-header">{{'SETTINGS.LANGUAGE_TITLE'| translate}}</div>
+    <div class="setting-control">
+      <mat-form-field  class="language-select-material">
+        <mat-label>{{'SETTINGS.LANGUAGE_SELECT'| translate}}</mat-label>
+        <mat-select [(ngModel)]="selectedLanguage" (selectionChange)="switchLanguage($event)"   [value]="selectedLanguage">
+          <mat-option value="en">{{ 'ENGLISH_BUTTON' | translate }}</mat-option>
+          <mat-option value="fr">{{ 'FRENCH_BUTTON' | translate }}</mat-option>
+          </mat-select>
+      </mat-form-field>
+    </div>
+  </section>
+
+<!-- notification settings -->
+<section class="settings-section p-4 rounded-md  shadow-md">
+  <div class="setting-header text-lg font-semibold  mb-3">
+    {{ 'SETTINGS.NOTIFICATIONS_TITLE' | translate }}
+  </div>
+<div class="setting-control">
+    <mat-checkbox
+      [(ngModel)]="notificationsEnabled"
+      (change)="updateNotificationSettings($event.checked)"
+    > </mat-checkbox>
+
+    <span>{{ 'SETTINGS.NOTIFICATIONS_ENABLE_LABEL' | translate }}
+    </span>  
+  </div>
+</section>
+
+</div>
