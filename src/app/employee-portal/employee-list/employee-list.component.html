@@ -1,0 +1,63 @@
+<section class="employee-list-wrapper">
+
+  <h2 class="page-title">Employee List</h2>
+  <div *ngIf="loading"
+   class="bg-white/40 flex flex-col items-center justify-center z-50">
+  <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-800 border-solid"></div>
+  <p class="mt-4 text-black text-lg">Loading...</p>
+</div>
+
+
+  <div *ngIf="hasError && !loading" class="error-message-container">
+    <app-error-message></app-error-message>
+  </div>
+ 
+  <div class="table-container" *ngIf="!loading && !hasError">
+    
+    <div class="flex flex-wrap items-center justify-between mb-4">
+      <button
+        (click)="onAddEmployee()"
+        class="hover:bg-blue-700 text-white  py-2 px-4 rounded shadow-md mb-2 sm:mb-0 add-employee-btn">
+        + Add Employee
+      </button>
+    
+    
+      <div class="search-bar-container mb-4 text-left">
+        <input
+          type="text"
+          placeholder="Search by name or email"
+          class="quick-filter-input border px-3 py-2 rounded shadow-sm"
+          style="color: black!important; "
+          (input)="onQuickFilterChanged($event)"
+        />
+      </div>
+    </div>
+    
+    <div *ngIf="!loading && rowData.length === 0" class="text-center text-gray-700 mt-4 no-record-text">
+      No employee records found!
+    </div>
+    
+    <div class="responsive-grid-wrapper" *ngIf="!loading && !hasError && rowData.length > 0">
+      <ag-grid-angular
+        [context]="{ componentParent: this }"
+        class="ag-theme-quartz employee-grid"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs"
+        [pagination]="true"
+        [paginationPageSize]="5"
+        [paginationPageSizeSelector]="false"
+        [animateRows]="true"
+        [domLayout]="'normal'"
+        [quickFilterText]="quickFilterValue"
+        style="width: 100%">
+      </ag-grid-angular>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+.action-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.action-btn {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.edit-btn {
+  color: rgb(19, 48, 174)!important;
+}
+
+.delete-btn {
+  color: rgb(218, 19, 19)!important;
+}

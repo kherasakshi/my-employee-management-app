@@ -1,0 +1,31 @@
+.error-message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
+  color: #c62828;
+}
+
+.error-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.error-icon {
+  font-size: 48px;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.error-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.error-subtitle {
+  font-size: 0.9em;
+  line-height: 1.4;
+}

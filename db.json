@@ -1,0 +1,376 @@
+{
+  "employees-list": [
+    {
+      "firstName": "Sak",
+      "lastName": "Khera",
+      "email": "sk@gmail.com",
+      "age": 21,
+      "birthDate": "2005-07-07T18:30:00.000Z",
+      "profession": "Designer",
+      "sportInterest": "Basketball",
+      "showExtras": true,
+      "hobbies": "cooking",
+      "contact": "9876543210",
+      "id": "1"
+    },
+    {
+      "firstName": "Alice",
+      "lastName": "Doe",
+      "email": "alice@gmail.com",
+      "age": 28,
+      "birthDate": "2001-01-29T18:30:00.000Z",
+      "profession": "Designer",
+      "sportInterest": "Football",
+      "showExtras": true,
+      "hobbies": "Drawing",
+      "contact": "9876543210",
+      "id": "2"
+    },
+    {
+      "firstName": "Olivia ",
+      "lastName": "Doe",
+      "email": "olivia@gmail.com",
+      "age": 30,
+      "birthDate": "2001-01-01",
+      "profession": "Doctor",
+      "sportInterest": "Badminton",
+      "showExtras": true,
+      "hobbies": "Dance",
+      "contact": "9876543210",
+      "id": "3"
+    },
+    {
+      "firstName": "Erica",
+      "lastName": "Doe",
+      "email": "erica12@gmail.com",
+      "age": 30,
+      "birthDate": "2001-01-17T18:30:00.000Z",
+      "profession": "Designer",
+      "sportInterest": "Cricket",
+      "showExtras": true,
+      "hobbies": "Reading",
+      "contact": "9876543210",
+      "id": "4"
+    },
+    {
+      "firstName": "sak",
+      "lastName": "ss",
+      "email": "sa22@gmail.com",
+      "age": 11,
+      "birthDate": "2025-07-04T18:30:00.000Z",
+      "profession": "Doctor",
+      "sportInterest": "Football",
+      "showExtras": true,
+      "hobbies": "ss",
+      "contact": "1234556789",
+      "id": "21"
+    },
+    {
+      "firstName": "elisha",
+      "lastName": "Doe",
+      "email": "elisha@gmail.com",
+      "age": 22,
+      "birthDate": "2025-07-16T18:30:00.000Z",
+      "profession": "Doctor",
+      "sportInterest": "Football",
+      "showExtras": true,
+      "hobbies": "ss",
+      "contact": "1234567890",
+      "id": "22"
+    },
+    {
+      "id": "23",
+      "firstName": "ss",
+      "lastName": "ss",
+      "email": "lily@gmail.com",
+      "age": "90",
+      "birthDate": "2025-07-09T18:30:00.000Z",
+      "profession": "Designer",
+      "sportInterest": "Badminton",
+      "showExtras": true,
+      "hobbies": "ww",
+      "contact": "1222233566"
+    },
+    {
+      "id": "24",
+      "firstName": "Isha",
+      "lastName": "Kaut",
+      "email": "isha@gmail.com",
+      "age": "90",
+      "birthDate": "2025-07-02T18:30:00.000Z",
+      "profession": "Teacher",
+      "sportInterest": "Basketball",
+      "showExtras": true,
+      "hobbies": "reading",
+      "contact": "1234567890"
+    },
+    {
+      "id": "25",
+      "firstName": "Erica",
+      "lastName": "ee",
+      "email": "erica31@gmail.com",
+      "age": "100",
+      "birthDate": "2025-07-09T18:30:00.000Z",
+      "profession": "Teacher",
+      "sportInterest": "Football",
+      "showExtras": true,
+      "hobbies": "cooking",
+      "contact": "1234567899"
+    },
+    {
+      "id": "39dc",
+      "firstName": "Sak",
+      "lastName": "Khera ",
+      "email": "eri456@gmail.com",
+      "age": "90",
+      "birthDate": "2001-07-24T18:30:00.000Z",
+      "profession": "Designer",
+      "sportInterest": "Basketball",
+      "showExtras": true,
+      "hobbies": "cooking",
+      "contact": "1234567899"
+    },
+    {
+      "id": "e704",
+      "firstName": "sak",
+      "lastName": "Khera ",
+      "email": "sak5@gmail.com",
+      "age": "43",
+      "birthDate": "2025-07-06T18:30:00.000Z",
+      "profession": "Doctor",
+      "sportInterest": "Football",
+      "showExtras": true,
+      "hobbies": "cooking",
+      "contact": "9876543210"
+    },
+    {
+      "firstName": "sakshi",
+      "lastName": "Khera ",
+      "email": "sak123@gmail.com",
+      "age": "90",
+      "birthDate": "2025-07-06T18:30:00.000Z",
+      "profession": "Teacher",
+      "sportInterest": "Football",
+      "showExtras": true,
+      "hobbies": "cooking",
+      "contact": "9876543210",
+      "id": "5cc4"
+    },
+    {
+      "id": "960e",
+      "firstName": "siya",
+      "lastName": "Khera ",
+      "email": "siya@gmail.com",
+      "age": "90",
+      "birthDate": "2025-07-23T18:30:00.000Z",
+      "profession": "Designer",
+      "sportInterest": "Football",
+      "showExtras": true,
+      "hobbies": "cooking",
+      "contact": "1223456799"
+    },
+    {
+      "id": "056a",
+      "firstName": "siya",
+      "lastName": "kaur",
+      "email": "skk@gmail.com",
+      "age": "23",
+      "birthDate": "2025-07-02T18:30:00.000Z",
+      "profession": "Doctor",
+      "sportInterest": "Cricket",
+      "showExtras": true,
+      "hobbies": "cooking",
+      "contact": "1234567890"
+    },
+    {
+      "id": "d010",
+      "firstName": "Sia",
+      "lastName": "kk",
+      "email": "sai@gmail.com",
+      "age": "40",
+      "birthDate": "2025-07-06T18:30:00.000Z",
+      "profession": "Designer",
+      "sportInterest": "Badminton",
+      "showExtras": true,
+      "hobbies": "reading",
+      "contact": "1223456799"
+    }
+  ],
+  "professions": [
+    {
+      "id": "1",
+      "name": "Engineer"
+    },
+    {
+      "id": "2",
+      "name": "Designer"
+    },
+    {
+      "id": "3",
+      "name": "Doctor"
+    },
+    {
+      "id": "4",
+      "name": "Teacher"
+    }
+  ],
+  "medical-details": [
+    {
+      "id": "1001",
+      "policyName": "Health Plus",
+      "salary": 500000,
+      "claimedAmount": 50000,
+      "numberOfDependents": 3
+    },
+    {
+      "id": "1002",
+      "policyName": "Life Shield",
+      "salary": 650000,
+      "claimedAmount": 100000,
+      "numberOfDependents": 2
+    },
+    {
+      "id": "1003",
+      "policyName": "Secure ",
+      "salary": 420000,
+      "claimedAmount": 30000,
+      "numberOfDependents": 4
+    },
+    {
+      "id": "1004",
+      "policyName": "MediCare Premium",
+      "salary": 800000,
+      "claimedAmount": 150000,
+      "numberOfDependents": 1
+    },
+    {
+      "id": "216f",
+      "policyName": "My Insurance",
+      "salary": 500000,
+      "claimedAmount": 50000,
+      "numberOfDependents": 2
+    },
+    {
+      "id": "d39c",
+      "policyName": "hello",
+      "salary": 22333,
+      "claimedAmount": 3333,
+      "numberOfDependents": 4
+    },
+    {
+      "id": "cae2",
+      "policyName": "Go Healthy",
+      "salary": 300000,
+      "claimedAmount": 10000,
+      "numberOfDependents": 2
+    },
+    {
+      "id": "d417",
+      "policyName": "Family Insurance",
+      "salary": 500000,
+      "claimedAmount": 50000,
+      "numberOfDependents": 2
+    },
+    {
+      "id": "0464",
+      "policyName": "My Health Insurance",
+      "salary": "222",
+      "claimedAmount": "30000",
+      "numberOfDependents": "2"
+    },
+    {
+      "id": "6a3c",
+      "policyName": "Health Life ",
+      "salary": "500000",
+      "claimedAmount": "50000",
+      "numberOfDependents": "2"
+    },
+    {
+      "id": "2385",
+      "policyName": "My Go Health",
+      "salary": "420000",
+      "claimedAmount": "30000",
+      "numberOfDependents": "2"
+    },
+    {
+      "id": "7863",
+      "policyName": "Secure ",
+      "salary": "700000",
+      "claimedAmount": "50000",
+      "numberOfDependents": "2"
+    },
+    {
+      "id": "80ab",
+      "policyName": "My Health",
+      "salary": "300000",
+      "claimedAmount": "20000",
+      "numberOfDependents": "1"
+    }
+  ],
+  "employeeAgeGroups": [
+    {
+      "ageGroup": "20-29",
+      "count": 10,
+      "id": "46df"
+    },
+    {
+      "ageGroup": "30-39",
+      "count": 15,
+      "id": "fd29"
+    },
+    {
+      "ageGroup": "40-49",
+      "count": 5,
+      "id": "5787"
+    },
+    {
+      "ageGroup": "50+",
+      "count": 2,
+      "id": "139c"
+    }
+  ],
+  "employeeProfessions": [
+    {
+      "profession": "Engineer",
+      "count": 12,
+      "id": "2c6d"
+    },
+    {
+      "profession": "Doctor",
+      "count": 8,
+      "id": "9638"
+    },
+    {
+      "profession": "Teacher",
+      "count": 6,
+      "id": "77b3"
+    },
+    {
+      "profession": "Designer",
+      "count": 4,
+      "id": "1cc5"
+    }
+  ],
+  "monthlyClaims": [
+    {
+      "month": "Jan",
+      "avgClaimed": 12000,
+      "id": "2386"
+    },
+    {
+      "month": "Feb",
+      "avgClaimed": 15000,
+      "id": "29da"
+    },
+    {
+      "month": "Mar",
+      "avgClaimed": 9000,
+      "id": "48da"
+    },
+    {
+      "month": "Apr",
+      "avgClaimed": 18000,
+      "id": "8685"
+    }
+  ]
+}

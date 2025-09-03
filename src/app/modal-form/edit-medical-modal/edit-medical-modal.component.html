@@ -1,0 +1,84 @@
+<div class="theme-toggle text-right flex flex-row justify-between">
+  <mat-icon (click)="toggleTheme()" class="theme-icon">
+    {{ isDarkTheme ? 'dark_mode' : 'light_mode' }}
+  </mat-icon>
+
+  <div>
+    <mat-icon class="close-icon" (click)="onCancel()">close</mat-icon>
+  </div>
+</div>
+
+<form
+  [formGroup]="medicalForm"
+  (ngSubmit)="onSubmit()"
+  [ngClass]="isDarkTheme ? 'dark-mode' : 'light-mode'"
+>
+  <h2 mat-dialog-title class="add-title">
+    {{ data ? 'Edit' : 'Add' }} Medical Details
+  </h2>
+
+  <div class="grid grid-cols-1 gap-4">
+
+    <span class="block text-black font-semibold mb-1">Policy Name:</span>
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Policy Name</mat-label>
+      <input matInput formControlName="policyName"  id="policyName" name="policyName"/>
+      <mat-error
+        *ngIf="medicalForm.get('policyName')?.invalid && medicalForm.get('policyName')?.touched"
+      >
+        Policy Name is required!
+      </mat-error>
+    </mat-form-field>
+
+
+    <span class="block text-black font-semibold mb-1">Salary:</span>
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Salary</mat-label>
+      <input matInput  formControlName="salary"  id="salary" name="salary"/>
+      <mat-error
+        *ngIf="medicalForm.get('salary')?.invalid && medicalForm.get('salary')?.touched"
+      >
+        Salary is required!
+      </mat-error>
+    </mat-form-field>
+
+    <span class="block text-black font-semibold mb-1">Claimed Amount:</span>
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Claimed Amount</mat-label>
+      <input matInput formControlName="claimedAmount"  id="claimedAmount" name="claimedAmount"/>
+      <mat-error
+        *ngIf="medicalForm.get('claimedAmount')?.invalid && medicalForm.get('claimedAmount')?.touched"
+      >
+        Claimed Amount is required!
+      </mat-error>
+    </mat-form-field>
+
+
+    <span class="block text-black font-semibold mb-1">Dependents:</span>
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>No. of Dependents</mat-label>
+      <input matInput formControlName="numberOfDependents" id="numberOfDependents" name="numberOfDependents"/>
+      <mat-error
+        *ngIf="medicalForm.get('numberOfDependents')?.invalid && medicalForm.get('numberOfDependents')?.touched"
+      >
+        Number of Dependents is required!
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="flex flex-col sm:flex-row justify-end gap-4 mt-6">
+    <button mat-button type="button" (click)="onCancel()" class="close-btn">
+      Cancel
+    </button>
+    <button
+      mat-flat-button
+      color="primary"
+      type="submit"
+      [disabled]="medicalForm.invalid"
+      class="submit-btn"
+    >
+      {{submitButton}}
+    </button>
+  </div>
+</form>
+
