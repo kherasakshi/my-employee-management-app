@@ -1,7 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, catchError, of, tap, throwError } from 'rxjs';
-import { Employee, Profession } from '../../employee-portal/employee-list/interface-model/employee-model';
+import {
+  Employee,
+  Profession,
+} from '../../employee-portal/employee-list/interface-model/employee-model';
 
 @Injectable({ providedIn: 'root' })
 export class EmployeeListService {
