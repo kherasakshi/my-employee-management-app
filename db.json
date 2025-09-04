@@ -181,19 +181,6 @@
       "showExtras": true,
       "hobbies": "cooking",
       "contact": "1234567890"
-    },
-    {
-      "id": "d010",
-      "firstName": "Sia",
-      "lastName": "kk",
-      "email": "sai@gmail.com",
-      "age": "40",
-      "birthDate": "2025-07-06T18:30:00.000Z",
-      "profession": "Designer",
-      "sportInterest": "Badminton",
-      "showExtras": true,
-      "hobbies": "reading",
-      "contact": "1223456799"
     }
   ],
   "professions": [
